@@ -18,6 +18,7 @@ from db import t_kline
 class KLineSymbol(Enum):
     BtcUsdt = "BTCUSDT"
     EthUsdt = "ETHUSDT"
+    LtcUsdt = "LTCUSDT"
 
 
 class KLineInterval(Enum):
@@ -41,7 +42,7 @@ engine = create_engine(db_dsn)
 db_session = Session(autocommit=False, autoflush=False, bind=engine)
 
 data_dir = "data"
-kline_symbol = KLineSymbol.EthUsdt
+kline_symbol = KLineSymbol.LtcUsdt
 kline_interval = KLineInterval.OneMinute
 data_path = "{}/{}/{}".format(data_dir, kline_symbol.value, kline_interval.value)
 if not os.path.exists(data_path):

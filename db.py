@@ -14,10 +14,10 @@ t_kline = Table(
     Column("close_price", Numeric(32, 16)),
     Column("high_price", Numeric(32, 16)),
     Column("low_price", Numeric(32, 16)),
-    Column("base_volumn", Numeric(32, 16)),
-    Column("quote_volumn", Numeric(32, 16)),
+    Column("base_volume", Numeric(32, 16)),
+    Column("quote_volume", Numeric(32, 16)),
     Column("trades_count", Integer),
-    Column("taker_buy_base_volumn", Numeric(32, 16)),
-    Column("taker_buy_quote_volumn", Numeric(32, 16)),
+    Column("taker_buy_base_volume", Numeric(32, 16)),
+    Column("taker_buy_quote_volume", Numeric(32, 16)),
     Column("reserved", String(64))
 )
